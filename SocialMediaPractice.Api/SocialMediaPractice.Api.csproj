@@ -18,4 +18,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SocialMediaPractice.Application\SocialMediaPractice.Application.csproj" />
+    </ItemGroup>
+
 </Project>
