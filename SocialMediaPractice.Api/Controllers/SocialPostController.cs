@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SocialMediaPractice.Application;
+using SocialMediaPractice.Application.Models;
 
 namespace SocialMediaPractice.Api.Controllers;
 
@@ -10,7 +11,9 @@ public class SocialPostController : ControllerBase
     [HttpPost]
     public string CreateSocialPost(string postString)
     {
-        var handler = new GreetingHandler();
-        return handler.CreateGreeting(postString);
+        var post = new SocialMediaPost();
+        post.AddText(postString);
+        
+        return post.SocialMediaPostText;
     }
 }
